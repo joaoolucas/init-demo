@@ -1,0 +1,9 @@
+[project]
+protostar-version = "0.9.0"
+lib-path = "lib"
+
+[contracts]
+main = ["src/contract.cairo"]
+interface = ["src/utils/interfaces/IERC20.cairo"]
+safe = ["src/utils/SafeERC20.cairo"]
+

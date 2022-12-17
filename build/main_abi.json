@@ -1,0 +1,110 @@
+[
+    {
+        "members": [
+            {
+                "name": "courseOwner",
+                "offset": 0,
+                "type": "felt"
+            },
+            {
+                "name": "totalStaked",
+                "offset": 1,
+                "type": "felt"
+            },
+            {
+                "name": "stakedToken",
+                "offset": 2,
+                "type": "felt"
+            }
+        ],
+        "name": "Courses",
+        "size": 3,
+        "type": "struct"
+    },
+    {
+        "data": [
+            {
+                "name": "courseOwner",
+                "type": "felt"
+            },
+            {
+                "name": "totalStaked",
+                "type": "felt"
+            },
+            {
+                "name": "stakedTokenAddress",
+                "type": "felt"
+            },
+            {
+                "name": "courseId",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "CourseAdded",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "name": "owner_address",
+                "type": "felt"
+            }
+        ],
+        "name": "constructor",
+        "outputs": [],
+        "type": "constructor"
+    },
+    {
+        "inputs": [
+            {
+                "name": "course_id",
+                "type": "felt"
+            }
+        ],
+        "name": "querryCourse",
+        "outputs": [
+            {
+                "name": "course_stats",
+                "type": "Courses"
+            }
+        ],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "course_id",
+                "type": "felt"
+            },
+            {
+                "name": "totalStaked",
+                "type": "felt"
+            },
+            {
+                "name": "stakedTokenAddress",
+                "type": "felt"
+            }
+        ],
+        "name": "addCourse",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "courseId",
+                "type": "felt"
+            }
+        ],
+        "name": "viewCourse",
+        "outputs": [
+            {
+                "name": "course_stats",
+                "type": "Courses"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]
